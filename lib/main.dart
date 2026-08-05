@@ -406,24 +406,24 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   final List<Map<String, dynamic>> _slides = [
     {
-      'emoji': '👋',
+      'icon': Icons.waving_hand_rounded,
       'title': 'Selamat Datang di\nCatatUang!',
       'subtitle':
           'Aplikasi manajemen keuangan pribadi yang simpel dan powerful.',
     },
     {
-      'emoji': '💰',
+      'icon': Icons.account_balance_wallet_rounded,
       'title': 'Catat Setiap\nTransaksi',
       'subtitle': 'Pantau pemasukan & pengeluaran harian kamu dengan mudah.',
     },
     {
-      'emoji': '📊',
+      'icon': Icons.insights_rounded,
       'title': 'Lihat Laporan\n& Insight',
       'subtitle':
           'Ketahui kategori paling boros dan tren keuangan bulanan kamu.',
     },
     {
-      'emoji': '🛡️',
+      'icon': Icons.verified_user_rounded,
       'title': 'Aman & Ter-backup\nke Cloud',
       'subtitle': 'Data kamu tersimpan aman dan bisa di-backup ke akun Google.',
     },
@@ -482,7 +482,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 child: Column(
                   children: [
                     const Spacer(),
-                    // Emoji ilustrasi
+                    // Icon ilustrasi
                     Container(
                       width: 140,
                       height: 140,
@@ -491,9 +491,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         shape: BoxShape.circle,
                       ),
                       child: Center(
-                        child: Text(
-                          s['emoji'],
-                          style: const TextStyle(fontSize: 64),
+                        child: Icon(
+                          s['icon'] as IconData,
+                          size: 64,
+                          color: Colors.green,
                         ),
                       ),
                     ),
